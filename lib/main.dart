@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/counter.dart';
 
 void main() {
-  runApp(MyFirstApp());
+  runApp(HomeCounter());
 }
 
 class MyFirstApp extends StatefulWidget {
@@ -73,7 +74,6 @@ class _MyFirstAppState extends State<MyFirstApp> {
     Timer.periodic(oneSec, (Timer t) {
       setState(() {
         _progress += 0.1;
-
         if (_progress.toStringAsFixed(1) == '1.0') {
           _loading = false;
           t.cancel();
